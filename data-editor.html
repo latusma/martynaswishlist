@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wishlist Data Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #f5f7fa; --editor-bg: #fff; --accent: #4a90e2; --text: #333; --radius: 8px; --gap: 1rem; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; background: var(--bg); color: var(--text); padding: 2rem; }
+    h1 { text-align: center; margin-bottom: 1.5rem; color: var(--accent); }
+    #controls { text-align: center; margin-bottom: 1rem; }
+    #controls button { background: var(--accent); color: #fff; border: none; padding: .6rem 1rem; border-radius: var(--radius); cursor: pointer; font-weight: 500; }
+    #entries { max-width: 800px; margin: 0 auto 1.5rem; display: flex; flex-direction: column; gap: var(--gap); }
+    .entry { background: var(--editor-bg); padding: 1rem; border-radius: var(--radius); box-shadow: rgba(0,0,0,0.1) 0 2px 6px; position: relative; }
+    .entry label { display: block; margin-bottom: .5rem; font-weight: 500; }
+    .entry input[type="text"], .entry textarea { width: 100%; padding: .5rem; border: 1px solid #ccc; border-radius: var(--radius); font-family: inherit; margin-bottom: .75rem; }
+    .entry textarea { resize: vertical; height: 4rem; }
+    .entry .remove { position: absolute; top: .5rem; right: .5rem; background: #e74c3c; border: none; color: #fff; padding: .3rem .6rem; border-radius: var(--radius); cursor: pointer; }
+    #actions { max-width: 800px; margin: 0 auto; display: flex; gap: var(--gap); }
+    #actions button { flex: 1; padding: .8rem; border: none; border-radius: var(--radius); font-weight: 500; cursor: pointer; }
+    #add-entry { background: var(--accent); color: #fff; }
+    #save-btn { background: #4caf50; color: #fff; }
+    #cancel-btn { background: #ccc; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>Wishlist Data Editor</h1>
+
+  <div id="controls">
+    <button id="load-btn">Load data.json</button>
+  </div>
+
+  <div id="entries"></div>
+
+  <div id="actions">
+    <button id="add-entry">+ Add Entry</button>
+    <button id="save-btn">Save</button>
+    <button id="cancel-btn">Clear All</button>
+  </div>
+
+  <script>
+    let data = [];
+    let fileHandle;
+    const loadBtn = document.getElementById('load-btn');
+    const entriesEl = document.getElementById('entries');
+    const addBtn = document.getElementById('add-entry');
+    const saveBtn = document.getElementById('save-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
+
+    loadBtn.onclick = async () => {
+      [fileHandle] = await window.showOpenFilePicker({
+        types: [{ description: 'JSON Files', accept: { 'application/json': ['.json'] } }],
+        suggestedName: 'data.json'
+      });
+      const file = await fileHandle.getFile();
+      data = JSON.parse(await file.text());
+      render();
+    };
+
+    function render() {
+      entriesEl.innerHTML = '';
+      data.forEach((item, i) => {
+        const div = document.createElement('div');
+        div.className = 'entry';
+        div.innerHTML = `
+          <button class="remove">×</button>
+          <label>Title<input type="text" class="title" value="${item.Title.replace(/"/g,'&quot;')}" /></label>
+          <label>Description<textarea class="desc">${item.Description}</textarea></label>
+          <label>Images (comma and space-separated)<input type="text" class="imgs" value="${item.Images.join(', ')}" /></label>
+          <label>Links (label|url, comma-separated)<input type="text" class="links" value="${item.Links.map(l=>l.label+'|'+l.url).join(', ')}" /></label>
+        `;
+        div.querySelector('.remove').onclick = () => { data.splice(i, 1); render(); };
+        div.querySelector('.title').oninput = e => data[i].Title = e.target.value;
+        div.querySelector('.desc').oninput = e => data[i].Description = e.target.value;
+        div.querySelector('.imgs').oninput = e => data[i].Images = e.target.value.split(', ').map(s => s.trim()).filter(Boolean);
+        div.querySelector('.links').oninput = e => data[i].Links = e.target.value.split(', ').map(s => s.trim()).filter(Boolean).map(r => { const [label, url] = r.split('|'); return { label: label.trim(), url: url.trim() }; });
+        entriesEl.appendChild(div);
+      });
+    }
+
+    addBtn.onclick = () => { data.push({ Title: '', Description: '', Images: [], Links: [] }); render(); };
+
+    saveBtn.onclick = async () => {
+      if (!fileHandle) { alert('Please load data.json first.'); return; }
+      const writable = await fileHandle.createWritable();
+      await writable.write(JSON.stringify(data, null, 2));
+      await writable.close();
+      alert('data.json updated');
+    };
+
+    cancelBtn.onclick = () => { data = []; render(); };
+  </script>
+</body>
+</html>
