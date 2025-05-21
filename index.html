@@ -174,7 +174,7 @@
     }
 
     (async () => {
-      const items = await (await fetch('data.json')).json();
+      const items = await (await fetch('data.json?nocache=' + Date.now())).json();
       const grid = document.getElementById('grid');
 
       items.forEach(item => {

@@ -45,10 +45,9 @@
   },
   {
     "Images": [
-      "carmageddon_1.jpg",
-      "ps1_1.jpg"
+      "images\\gt1_1.jpg"
     ],
-    "Title": "Cool Gadget",
+    "Title": "Gran Turismo (NTSC J)",
     "Description": "Read more on <a href=\"https://example.com\" target=\"_blank\">their site</a> Carmageddon is a vehicular combat video game released for personal computers in 1997.\n\nIt was produced by Stainless Games and published by Interplay Productions and Sales Curve Interactive. It was ported to other platforms, and spawned a series. In 2011, Stainless Games obtained the rights to Carmageddon from Square Enix Europe.\niOS and Android ports were released in 2012 and 2013, respectively.[4] THQ Nordic acquired the rights to the Carmageddon series from Stainless Games in December 2018.",
     "Links": [
       {
@@ -67,12 +66,10 @@
   },
   {
     "Images": [
-      "carmageddon_1.jpg",
-      "ps1_1.jpg",
-      "https://www.retrogames.cz/games/022/NES-gameplay.gif"
+      "https://res.garmin.com/en/products/010-13383-01/v/cf-lg.jpg"
     ],
-    "Title": "Cool Gadget",
-    "Description": "Read more on <a href=\"https://example.com\" target=\"_blank\">their site</a> Carmageddon is a vehicular combat video game released for personal computers in 1997.\n\nIt was produced by Stainless Games and published by Interplay Productions and Sales Curve Interactive. It was ported to other platforms, and spawned a series. In 2011, Stainless Games obtained the rights to Carmageddon from Square Enix Europe.\niOS and Android ports were released in 2012 and 2013, respectively.[4] THQ Nordic acquired the rights to the Carmageddon series from Stainless Games in December 2018.",
+    "Title": "Širdies ritmo matuoklis, Garmin HRM 600",
+    "Description": "M-XL dydis.",
     "Links": [
       {
         "url": "https://ebay.com/…",
@@ -90,23 +87,28 @@
   },
   {
     "Images": [
-      "carmageddon_1.jpg",
-      "ps1_1.jpg"
+      "https://www.retrogamingcables.co.uk/image/cache/catalog/SCART621%20mechanical%20SCART%20switch%20six%20in%20one%20out%20retrogamingcables%20top%20new-400x400.JPG",
+      "https://www.retrogamingcables.co.uk/image/cache/catalog/SCART621%20mechanical%20SCART%20switch%20six%20in%20one%20out%20retrogamingcables%20left%20new-1000x1000.JPG"
     ],
-    "Title": "Cool Gadget",
+    "Title": "Manual SCART621 Switcher",
     "Description": "Read more on <a href=\"https://example.com\" target=\"_blank\">their site</a> Carmageddon is a vehicular combat video game released for personal computers in 1997.\n\nIt was produced by Stainless Games and published by Interplay Productions and Sales Curve Interactive. It was ported to other platforms, and spawned a series. In 2011, Stainless Games obtained the rights to Carmageddon from Square Enix Europe.\niOS and Android ports were released in 2012 and 2013, respectively.[4] THQ Nordic acquired the rights to the Carmageddon series from Stainless Games in December 2018.",
     "Links": [
       {
-        "url": "https://ebay.com/…",
-        "label": "eBay"
-      },
+        "label": "retrogamingcables",
+        "url": "https://www.retrogamingcables.co.uk/SCART621-manual-SCART-switch-six-6-in-one-1-out-with3.5mm-stereo-jack"
+      }
+    ]
+  },
+  {
+    "Title": "Dead Sara - Ain't It Tragic plokštelė",
+    "Description": "",
+    "Images": [
+      "https://www.roughtrade.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0867%2F1120%2F6219%2Ffiles%2FDhGEgvIm7d5SWen9bOMu7b6OFR75kkxTnMogkw4DFD0-1920w_jpg.webp%3Fv%3D1741640491&w=640&q=75"
+    ],
+    "Links": [
       {
-        "url": "https://amazon.com/…",
-        "label": "Amazon"
-      },
-      {
-        "url": "https://amazon.com/…",
-        "label": "Sudazonas"
+        "label": "Roughtrade",
+        "url": "https://www.roughtrade.com/en-de/product/dead-sara/ain-t-it-tragic-xs#51404148703563"
       }
     ]
   }
