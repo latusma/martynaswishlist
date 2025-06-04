@@ -208,5 +208,18 @@
         "url": "https://gameroom.lt/lt/ps5-zaidimai/products/astro-bot-17628?search_query=astro+bot&results=3"
       }
     ]
+  },
+  {
+    "Title": "Yakuza (Playstation 2)",
+    "Description": "Klasikins, japoniškas PS2 žaidimas. NTSC-U/C (Amerikos) regiono versija.\n\nSenas, klasikinis reikals, rast tik eBay galima.",
+    "Images": [
+      "yakuza_01.jpg"
+    ],
+    "Links": [
+      {
+        "label": "eBay",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=yakuza&_sacat=0&_from=R40&Platform=Sony%2520PlayStation%25202&_dcat=139973&rt=nc&LH_PrefLoc=3"
+      }
+    ]
   }
 ]
