@@ -76,10 +76,10 @@
       "https://www.retrogamingcables.co.uk/image/cache/catalog/SCART621%20mechanical%20SCART%20switch%20six%20in%20one%20out%20retrogamingcables%20left%20new-1000x1000.JPG"
     ],
     "Title": "Manual SCART621 Switcher",
-    "Description": "Read more on <a href=\"https://example.com\" target=\"_blank\">their site</a> Carmageddon is a vehicular combat video game released for personal computers in 1997.\n\nIt was produced by Stainless Games and published by Interplay Productions and Sales Curve Interactive. It was ported to other platforms, and spawned a series. In 2011, Stainless Games obtained the rights to Carmageddon from Square Enix Europe.\niOS and Android ports were released in 2012 and 2013, respectively.[4] THQ Nordic acquired the rights to the Carmageddon series from Stainless Games in December 2018.",
+    "Description": "Čia toks SCART jungiklis, kuris leidžia sujungti daug žaidimų konsolių prie vieno ekrano. Tai man kaip entuziastui, labai būt pravartu.\nPardavinėja tokia speclializuota UK parduotuvė.",
     "Links": [
       {
-        "label": "retrogamingcables",
+        "label": "Retrogamingcables",
         "url": "https://www.retrogamingcables.co.uk/SCART621-manual-SCART-switch-six-6-in-one-1-out-with3.5mm-stereo-jack"
       }
     ]
@@ -164,7 +164,7 @@
   },
   {
     "Title": "Total Recall 4k Ultra-HD",
-    "Description": "",
+    "Description": "Dar vienas bajavyks su Švarcnegeriu, kai į marsą iškeliavo atostogų...(?)\n\nLengva rasti amazonėj.\n\np.s. 4K Ultra HD versija.",
     "Images": [
       "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/81WEaB4yINL._AC_SL1500_.jpg"
     ],
@@ -189,6 +189,23 @@
       {
         "label": "Skytech",
         "url": "https://www.skytech.lt/hts2000cel-sony-hts2000-31ch-dolby-atmos-dtsx-soundbar-31ch-dolby-atmos-dtsx-sou-p-659555.html?utm_source=kaina24.lt&utm_medium=referral"
+      }
+    ]
+  },
+  {
+    "Title": "Astro Bot (Playstation 5)",
+    "Description": "Labai kiets eksliuzyvinis žaidims ant PS5.\n\nLengva rasti Amazonėj ir Gameroom.",
+    "Images": [
+      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/81I7PNjm-lL._AC_SL1500_.jpg"
+    ],
+    "Links": [
+      {
+        "label": "Amazon",
+        "url": "https://www.amazon.co.uk/PlayStation-ASTRO-BOT/dp/B0D67G5Y6T/ref=sr_1_2?crid=2Z1AJOPZXUNM7&dib=eyJ2IjoiMSJ9.jIbVtOWEaBYFU9bkOK10bcc1UQup97f-x297QqgVg25tuxwNwzRdPMlKKO1St6IsSkv8ZpreiZOkPwV9HBVsbcUVu4ZeLP9V6prCjYbFZI0q1TLSU4CFMEhQw3w3y_3-ywlPICtxTqXg406-5T5tRUWv2q0xzblXCGCR6tp2Qb_5EPulaSh8j2QayH3AhgZ6uwQvvgAjxpTPg6kQy28_mAWV_TAR7XHFbMIqb8yqlTs.lrJH2YDReCMdm9HO4ogOE33UcmlrkHso-iXn2cRJENo&dib_tag=se&keywords=Astro+Bot&qid=1749062469&sprefix=astro+bot%2Caps%2C145&sr=8-2"
+      },
+      {
+        "label": "Gameroom",
+        "url": "https://gameroom.lt/lt/ps5-zaidimai/products/astro-bot-17628?search_query=astro+bot&results=3"
       }
     ]
   }
