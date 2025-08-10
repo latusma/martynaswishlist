@@ -63,6 +63,9 @@
     function render() {
       entriesEl.innerHTML = '';
       data.forEach((item, i) => {
+        // default Received if missing (helps old JSONs)
+        if (typeof item.Received === 'undefined') item.Received = false;
+
         const div = document.createElement('div');
         div.className = 'entry';
         div.innerHTML = `
@@ -72,41 +75,49 @@
             <button class="move-down">↓</button>
           </div>
           <div class="fields">
-            <label>Title<input type="text" class="title" value="${item.Title.replace(/"/g,'&quot;')}" /></label>
-            <label>Description<textarea class="desc">${item.Description}</textarea></label>
-            <label>Images (comma and space-separated)<input type="text" class="imgs" value="${item.Images.join(', ')}" /></label>
-            <label>Links (label|url, comma-separated)<input type="text" class="links" value="${item.Links.map(l=>l.label+'|'+l.url).join(', ')}" /></label>
-            <label> <input type="checkbox" class="received" ${item.Received ? 'checked' : ''} /> Received </label>
+            <label>Title
+              <input type="text" class="title" value="${item.Title.replace(/"/g,'&quot;')}" />
+            </label>
+            <label>Description
+              <textarea class="desc">${item.Description}</textarea>
+            </label>
+            <label>Images (comma and space-separated)
+              <input type="text" class="imgs" value="${item.Images.join(', ')}" />
+            </label>
+            <label>Links (label|url, comma-separated)
+              <input type="text" class="links" value="${item.Links.map(l=>l.label+'|'+l.url).join(', ')}" />
+            </label>
+            <label>
+              <input type="checkbox" class="received" ${item.Received ? 'checked' : ''} />
+              Received
+            </label>
           </div>
         `;
+
         // Handlers
         div.querySelector('.remove').onclick = () => { data.splice(i, 1); render(); };
         div.querySelector('.move-up').onclick = () => {
-          if (i > 0) {
-            data.splice(i - 1, 0, data.splice(i, 1)[0]);
-            render();
-          }
+          if (i > 0) { data.splice(i - 1, 0, data.splice(i, 1)[0]); render(); }
         };
         div.querySelector('.move-down').onclick = () => {
-          if (i < data.length - 1) {
-            data.splice(i + 1, 0, data.splice(i, 1)[0]);
-            render();
-          }
+          if (i < data.length - 1) { data.splice(i + 1, 0, data.splice(i, 1)[0]); render(); }
         };
         div.querySelector('.title').oninput = e => data[i].Title = e.target.value;
         div.querySelector('.desc').oninput = e => data[i].Description = e.target.value;
         div.querySelector('.imgs').oninput = e => data[i].Images = e.target.value.split(', ').map(s => s.trim()).filter(Boolean);
         div.querySelector('.links').oninput = e => data[i].Links = e.target.value.split(', ')
           .map(s => s.trim()).filter(Boolean)
-          .map(r => { const [label, url] = r.split('|'); return { label: label.trim(), url: url.trim() }; });
+          .map(r => { const [label, url] = r.split('|'); return { label: (label||'').trim(), url: (url||'').trim() }; });
+        div.querySelector('.received').onchange = e => data[i].Received = e.target.checked;
+
         entriesEl.appendChild(div);
       });
     }
 
-    addBtn.onclick = () => { 
-  data.push({ Title: '', Description: '', Images: [], Links: [], Received: false }); 
-  render(); 
-};
+    addBtn.onclick = () => {
+      data.push({ Title: '', Description: '', Images: [], Links: [], Received: false });
+      render();
+    };
 
     saveBtn.onclick = async () => {
       if (!fileHandle) { alert('Please load data.json first.'); return; }
@@ -115,8 +126,6 @@
       await writable.close();
       alert('data.json updated');
     };
-    div.querySelector('.received').onchange = e => data[i].Received = e.target.checked;
-
 
     cancelBtn.onclick = () => { data = []; render(); };
   </script>

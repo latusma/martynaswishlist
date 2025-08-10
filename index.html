@@ -101,21 +101,18 @@
       border-radius: var(--radius);
       text-align: center;
     }
-    /* received item style */
-.card.received {
-  opacity: 0.5;
-}
-.card.received .thumb-wrapper {
-  position: relative;
-}
-.card.received .thumb-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('received-overlay.png') center/contain no-repeat;
-  pointer-events: none;
-}
+
+    /* received item style (grays out + overlay on thumbnail) */
+    .card.received { opacity: 0.5; }
+    .card.received .thumb-wrapper { position: relative; }
+    .card.received .thumb-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('received-overlay.png') center/contain no-repeat;
+      pointer-events: none;
+    }
 
     /* lightbox */
     .lightbox {
@@ -200,9 +197,14 @@
 
         const card = document.createElement('div');
         card.className = 'card';
-        if (item.Received) card.classList.add('received');
 
+        // tolerate "Received" or "received" and string "true" values
+        const isReceived =
+          item.Received === true || item.received === true ||
+          item.Received === "true" || item.received === "true";
+        if (isReceived) card.classList.add('received');
 
+        // thumbnail wrapper enables overlay
         const thumbWrapper = document.createElement('div');
         thumbWrapper.className = 'thumb-wrapper';
 
@@ -211,9 +213,8 @@
         thumb.alt = item.Title;
         thumb.onclick = () => openLB(imgs, 0);
 
-thumbWrapper.appendChild(thumb);
-card.appendChild(thumbWrapper);
-
+        thumbWrapper.appendChild(thumb);
+        card.appendChild(thumbWrapper);
 
         const c = document.createElement('div');
         c.className = 'card-content';
