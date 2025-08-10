@@ -76,6 +76,7 @@
             <label>Description<textarea class="desc">${item.Description}</textarea></label>
             <label>Images (comma and space-separated)<input type="text" class="imgs" value="${item.Images.join(', ')}" /></label>
             <label>Links (label|url, comma-separated)<input type="text" class="links" value="${item.Links.map(l=>l.label+'|'+l.url).join(', ')}" /></label>
+            <label> <input type="checkbox" class="received" ${item.Received ? 'checked' : ''} /> Received </label>
           </div>
         `;
         // Handlers
@@ -102,7 +103,10 @@
       });
     }
 
-    addBtn.onclick = () => { data.push({ Title: '', Description: '', Images: [], Links: [] }); render(); };
+    addBtn.onclick = () => { 
+  data.push({ Title: '', Description: '', Images: [], Links: [], Received: false }); 
+  render(); 
+};
 
     saveBtn.onclick = async () => {
       if (!fileHandle) { alert('Please load data.json first.'); return; }
@@ -111,6 +115,8 @@
       await writable.close();
       alert('data.json updated');
     };
+    div.querySelector('.received').onchange = e => data[i].Received = e.target.checked;
+
 
     cancelBtn.onclick = () => { data = []; render(); };
   </script>
