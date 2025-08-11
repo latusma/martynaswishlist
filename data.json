@@ -150,7 +150,7 @@
     "Title": "Total Recall 4k Ultra-HD",
     "Description": "Dar vienas bajavyks su Švarcnegeriu, kai į marsą iškeliavo atostogų...(?)\n\nLengva rasti amazonėj.\n\np.s. 4K Ultra HD versija.",
     "Images": [
-      "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/81WEaB4yINL._AC_SL1500_.jpg"
+      "total_recall_1.jpg"
     ],
     "Links": [
       {
@@ -221,6 +221,21 @@
     "Received": false
   },
   {
+    "Title": "Akira 35th Anniversary Box Set",
+    "Description": "Neo-Tokyo nuotykiai su motociklais. Vaikystėj mama išnomavo vhs, tai labai traumavo mano šešiamečio smegenis. Tai dėl to dabar noriu mangas perskaityt.",
+    "Images": [
+      "akira-35th-1.jpg",
+      "akira-35th-2.jpg"
+    ],
+    "Links": [
+      {
+        "label": "Amazon",
+        "url": "https://www.amazon.co.uk/Akira-35th-Anniversary-Box-Set/dp/1632364611/ref=sr_1_1?crid=18J7RREQD6JS&dib=eyJ2IjoiMSJ9.FP6TeS5GouoxHm5J8iqaxNPFrJwUQPzASDpu3HUMefrG8OpZeyjwmA3TLcv62nU59Cv61egvnlSS-ayo2bxxsraNfVBn2kGKUbCh45BUzC6L2IxwyGMQTckhqkMzNUEG0TtCBwVcDoszcagKlBghNerZUAIWHRTHkASfjPNXiJ-_9fF8XD9mv43_27LLYybmFT4YyikXLFPDgQBSRKGN_B0lBtnV5PixSzNZDIAR58o.Li1k8gEbrMHZBsjNhn_YetIw1NK6OYtjfwKUROuFVX0&dib_tag=se&keywords=akira+manga&qid=1749187968&sprefix=akira+mang%2Caps%2C138&sr=8-1&ufe=app_do%3Aamzn1.fos.d7e5a2de-8759-4da3-993c-d11b6e3d217f"
+      }
+    ],
+    "Received": false
+  },
+  {
     "Title": "Predator [4K Ultra-HD + Blu-ray]",
     "Description": "Sugalvojau rink kiečiausius filmus su Švarcu. Tai vat čia labai esminė komedija yra, tai kaip pradedančiajam kolekcionuot filmus. Būt labai liux.\n\nGan naujas leidimas, tai pilnas amazonas...\n\np.s. 4K Ultra HD versija.",
     "Images": [
@@ -276,21 +291,6 @@
       {
         "label": "Amazon",
         "url": "https://www.amazon.com/BLAME-1-Tsutomu-Nihei/dp/1942993773/ref=sr_1_1?crid=V0NCKTGUC3H5&dib=eyJ2IjoiMSJ9.0wA8Gc1C6POj6NvcbVSS3I9hemGPzslzu6FTVxXMd9i1fO82Jvc1UWHTOj2iPjy7_8MaIY6vbLvD0PhnsUqEJxgAr6gkLIic98_Fz8DbeirW_6r2ZaBDkZaadLSNvzvL5_Praoyb0ELBDKzu1soW5HCgKIojRrKE3sqsEMcw8W9bebfjD6idf0LWDXg1Cduk5Hspi3XBQD04guBgow8KvH3VbwCkMIXLQ5qXqdiEpoY.hn4s9QQzzEhWI4bTGaW9rOg9kmwez1-8MmZXkCoRYT0&dib_tag=se&keywords=blame+manga&qid=1749067471&sprefix=Blame%21%2Caps%2C283&sr=8-1"
-      }
-    ],
-    "Received": true
-  },
-  {
-    "Title": "Akira 35th Anniversary Box Set",
-    "Description": "Neo-Tokyo nuotykiai su motociklais. Vaikystėj mama išnomavo vhs, tai labai traumavo mano šešiamečio smegenis. Tai dėl to dabar noriu mangas perskaityt.",
-    "Images": [
-      "akira-35th-1.jpg",
-      "akira-35th-2.jpg"
-    ],
-    "Links": [
-      {
-        "label": "Amazon",
-        "url": "https://www.amazon.co.uk/Akira-35th-Anniversary-Box-Set/dp/1632364611/ref=sr_1_1?crid=18J7RREQD6JS&dib=eyJ2IjoiMSJ9.FP6TeS5GouoxHm5J8iqaxNPFrJwUQPzASDpu3HUMefrG8OpZeyjwmA3TLcv62nU59Cv61egvnlSS-ayo2bxxsraNfVBn2kGKUbCh45BUzC6L2IxwyGMQTckhqkMzNUEG0TtCBwVcDoszcagKlBghNerZUAIWHRTHkASfjPNXiJ-_9fF8XD9mv43_27LLYybmFT4YyikXLFPDgQBSRKGN_B0lBtnV5PixSzNZDIAR58o.Li1k8gEbrMHZBsjNhn_YetIw1NK6OYtjfwKUROuFVX0&dib_tag=se&keywords=akira+manga&qid=1749187968&sprefix=akira+mang%2Caps%2C138&sr=8-1&ufe=app_do%3Aamzn1.fos.d7e5a2de-8759-4da3-993c-d11b6e3d217f"
       }
     ],
     "Received": true
