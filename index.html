@@ -209,6 +209,7 @@
 
       items.forEach(item => {
         const imgs = item.Images || (item.Image ? [item.Image] : []);
+          .map(img => "images/" + img);
         if (!imgs.length) return;
 
         const card = document.createElement('div');
