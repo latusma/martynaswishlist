@@ -208,9 +208,11 @@
       const grid = document.getElementById('grid');
 
       items.forEach(item => {
-        const imgs = item.Images || (item.Image ? [item.Image] : []);
-          .map(img => "images/" + img);
-        if (!imgs.length) return;
+        const imgs = (Array.isArray(item.Images)
+         ? item.Images
+         : (item.Images ? [item.Images] : (item.Image ? [item.Image] : []))
+        ).map(img => (/^(?:https?:|data:|images\/)/i.test(img) ? img : 'images/' + img));
+
 
         const card = document.createElement('div');
         card.className = 'card';
