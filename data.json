@@ -322,5 +322,33 @@
       }
     ],
     "Received": true
+  },
+  {
+    "Title": "The Legend of Zelda: Ocarina of Time N64",
+    "Description": "Niekad nežaidžiau, neturiu beveik jokių sentimentų, bet kažkaip vis tiek noriu išbandyt ir turėt kolekcijoj!\n\nBūtinai ntsc versija, nu ir gerai būtų, kad boxe - pilnas setas.",
+    "Images": [
+      "ocarina_of_time.jpg"
+    ],
+    "Links": [
+      {
+        "label": "eBay",
+        "url": "https://www.ebay.com/sch/i.html?_nkw=The+Legend+of+Zelda+Ocarina+of+Time+N64+cib&_sacat=0&_from=R40&_trksid=p2334524.m570.l1313&_odkw=The+Legend+of+Zelda+Ocarina+of+Time+N64&_osacat=0"
+      }
+    ],
+    "Received": false
+  },
+  {
+    "Title": "Tamagoyaki Keptuvė",
+    "Description": "Labai faina keptuvikė japoniškui omletui kept.\n\nModelis nesvarbu, pigu.lt pilna yra. :)",
+    "Images": [
+      "tamagoyaki.jpg"
+    ],
+    "Links": [
+      {
+        "label": "Pigu.lt",
+        "url": "https://pigu.lt/lt/sq?q=tamagoyaki"
+      }
+    ],
+    "Received": false
   }
 ]
